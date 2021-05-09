@@ -4,6 +4,10 @@
 
 * About seeds and cnn heads: https://www.kaggle.com/khoongweihao/tse2020-roberta-cnn-random-seed-distribution
 
+## Results:
+
+* Random seeds make training unstable. We are unable to get the same result a second time if we are using a different random_state
+
 ## Things to try
 
 - Check the impact of the seed 
