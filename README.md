@@ -1,5 +1,9 @@
 # Commonlit-Readability
 
+## Interesting notebooks:
+
+* About seeds and cnn heads: https://www.kaggle.com/khoongweihao/tse2020-roberta-cnn-random-seed-distribution
+
 ## Things to try
 
 - Check the impact of the seed 
