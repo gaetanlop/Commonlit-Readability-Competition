@@ -7,6 +7,7 @@
 ## Interesting articles
 
 * https://neptune.ai/blog/text-classification-tips-and-tricks-kaggle-competitions full of tips and tricks
+* Look at textstat for FE: https://pypi.org/project/textstat/
 
 ## Results:
 
