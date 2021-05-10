@@ -21,3 +21,7 @@
 - Choose a good sentence length
 - try data augmtentation: from english to french, from french to english
 - try to add custom features: https://www.kaggle.com/ravishah1/readability-feature-engineering-non-nn-baseline / https://arxiv.org/pdf/2010.09078.pdf
+
+## What I have done
+
+* Create the Dataset for simple MLP
