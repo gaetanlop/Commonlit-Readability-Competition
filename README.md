@@ -8,6 +8,11 @@
 
 * https://neptune.ai/blog/text-classification-tips-and-tricks-kaggle-competitions full of tips and tricks
 * Look at textstat for FE: https://pypi.org/project/textstat/
+* list of good nlp ressources: https://github.com/cedrickchee/awesome-bert-nlp
+* LSTM outperforms Bert when small datasets
+* add count based features to pretrain models https://arxiv.org/pdf/2010.09078.pdf
+* ReadNet: A Hierarchical Transformer Framework for Web Article Readability Analysis https://arxiv.org/pdf/2103.04083v1.pdf
+* 
 
 ## Results:
 
@@ -21,6 +26,7 @@
 - Choose a good sentence length
 - try data augmtentation: from english to french, from french to english
 - try to add custom features: https://www.kaggle.com/ravishah1/readability-feature-engineering-non-nn-baseline / https://arxiv.org/pdf/2010.09078.pdf
+- Use simple LSTM then concat with mlp hidden layer.
 
 ## What I have done
 
