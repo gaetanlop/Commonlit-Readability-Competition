@@ -4,6 +4,7 @@
 
 * About seeds and cnn heads: https://www.kaggle.com/khoongweihao/tse2020-roberta-cnn-random-seed-distribution
 * About LSTM best kernel ever done: https://www.kaggle.com/swarnabha/pytorch-text-classification-torchtext-lstm
+* About Freezing embedding layer
 
 ## Interesting articles
 
