@@ -14,6 +14,7 @@
 * LSTM outperforms Bert when small datasets
 * add count based features to pretrain models https://arxiv.org/pdf/2010.09078.pdf
 * ReadNet: A Hierarchical Transformer Framework for Web Article Readability Analysis https://arxiv.org/pdf/2103.04083v1.pdf
+* Get a huge understanging of bert models :https://mccormickml.com/2019/05/14/BERT-word-embeddings-tutorial/#sentence-vectors
 * 
 
 ## Results:
