@@ -34,3 +34,5 @@
 ## What I have done
 
 * Create the Dataset for simple MLP
+* Bert Embedding + LSTM
+* 
