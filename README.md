@@ -36,4 +36,6 @@
 
 * Create the Dataset for simple MLP
 * Bert Embedding + LSTM
-* 
+
+
+## Will come back to it Later! After the NER competition
