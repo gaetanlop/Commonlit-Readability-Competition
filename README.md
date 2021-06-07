@@ -38,4 +38,5 @@
 * Bert Embedding + LSTM
 
 
-## Will come back to it Later! After the NER competition
+## best resource to learn transformers
+https://jalammar.github.io/illustrated-transformer/
