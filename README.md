@@ -4,6 +4,7 @@
 ## What I have done
 
 * 07/06/2021-08/06/2021: create a simple training script for BERT. 
+* 08/06/2021: Add Multi Sample Dropout
 
 
 ## Things to try
