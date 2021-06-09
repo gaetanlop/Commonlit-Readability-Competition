@@ -12,6 +12,7 @@
 
 - Multi Sample Dropout not working well
 - Mean Max head: not working well
+- try convolutional heads
 - More regularization techniques like batchnorm, layer norm ...
 - pretrain bert on our corpus
 - Validate multiple times in one epoch
