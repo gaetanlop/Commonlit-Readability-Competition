@@ -10,12 +10,17 @@
 
 ## Things to try
 
-- Multi Sample Dropout
+- Multi Sample Dropout not working well
+- Mean Max head: not working well
+- More regularization techniques like batchnorm, layer norm ...
 - Check the impact of the seed 
-- Choose a good sentence length
 - try data augmtentation: from english to french, from french to english
 - try to add custom features: https://www.kaggle.com/ravishah1/readability-feature-engineering-non-nn-baseline / https://arxiv.org/pdf/2010.09078.pdf
 - Use simple LSTM then concat with mlp hidden layer (no one do it but good results in two papers about it. I will try it after tuning the Bert Model).
+
+## To Study
+
+- Global average pooling
 
 ## Interesting notebooks to look at:
 
