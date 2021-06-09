@@ -18,7 +18,7 @@
 - Validate multiple times in one epoch
 - Use Distillbert (smaller model)
 - character level bert / sentence level bert
-- Check the impact of the seed 
+- Check the impact of the seed https://www.kaggle.com/khoongweihao/tse2020-roberta-cnn-random-seed-distribution
 - try to add custom features: https://www.kaggle.com/ravishah1/readability-feature-engineering-non-nn-baseline / https://arxiv.org/pdf/2010.09078.pdf
 - Use simple LSTM then concat with mlp hidden layer (no one do it but good results in two papers about it. I will try it after tuning the Bert Model).
 - try data augmtentation: from english to french, from french to english
