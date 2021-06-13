@@ -5,7 +5,9 @@
 
 * 07/06/2021-08/06/2021: create a simple training script for BERT. 
 * 08/06/2021: Add Multi Sample Dropout based on this paper https://arxiv.org/pdf/1905.09788.pdf
-* 12/06/2021: Read the paper https://arxiv.org/pdf/1905.05583.pdf + 
+* 12/06/2021: Read the paper https://arxiv.org/pdf/1905.05583.pdf + creation of custom Pytorch Trainer and vealuator for Roberta. Pipeline finished.
+* 13/06/2021: Bert pretraining on our corpus. Still did not succeed to do it. Will finish it tomorrow.
+* 14/06/2021: I will create a script to validate multiple times in one epoch + pretrain bert on corpus.
 
 
 ## Things to try
