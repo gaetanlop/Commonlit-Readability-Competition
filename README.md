@@ -7,7 +7,7 @@
 * 08/06/2021: Add Multi Sample Dropout based on this paper https://arxiv.org/pdf/1905.09788.pdf
 * 12/06/2021: Read the paper https://arxiv.org/pdf/1905.05583.pdf + creation of custom Pytorch Trainer and Evaluator for Roberta. Pipeline finished.
 * 13/06/2021: Bert pretraining on our corpus. Still did not succeed to do it. Will finish it tomorrow.
-* 14/06/2021: Create a Script to validate the model mutlitple times in one epoch to fight against instability 
+* 14/06/2021: Create a Script to validate the model mutlitple times in one epoch to fight against instability : 0.5299962748524167
 * 15/06/2021: Goal learn differential learning rate and apply it.
 
 ## Things to try
