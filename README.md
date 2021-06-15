@@ -9,9 +9,11 @@
 * 13/06/2021: Bert pretraining on our corpus. Still did not succeed to do it. Will finish it tomorrow.
 * 14/06/2021: Create a Script to validate the model mutlitple times in one epoch to fight against instability : 0.5299962748524167
 * 15/06/2021: Implemented differential learning rate based on https://www.kaggle.com/rhtsingh/commonlit-readability-prize-roberta-torch-fit?scriptVersionId=64693127 + freezing/unfreezing.Learned about Pretrain on task dataset.
-* 16/06/2021: Define a custom init weight for the head + pretrain on corpus. Read domain adaption paper: https://arxiv.org/pdf/2004.10964.pdf
+* 16/06/2021: TO DO Define a custom init weight for the head + pretrain on corpus. Read domain adaption paper: https://arxiv.org/pdf/2004.10964.pdf
 
 ## Things to try
+
+- THIS WEEKEND ADD CUSTOM MLP LAYER TO BERT
 
 - Multi Sample Dropout not working well
 - Mean Max head: not working well
