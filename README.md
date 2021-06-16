@@ -20,9 +20,9 @@
 - try convolutional heads
 - try attention head
 - try pseudo labeling as the dataset is very small
-- More regularization techniques like batchnorm, layer norm ...
-- pretrain bert on our corpus
-- Validate multiple times in one epoch
+- More regularization techniques like batchnorm, layer norm work well
+- pretrain bert on our corpus Work well
+- Validate multiple times in one epoch Work well
 - Use Distillbert (smaller model)
 - character level bert / sentence level bert
 - Check the impact of the seed https://www.kaggle.com/khoongweihao/tse2020-roberta-cnn-random-seed-distribution
