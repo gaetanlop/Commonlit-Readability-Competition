@@ -15,8 +15,9 @@
 
 ## Things to try
 
-- THIS WEEKEND ADD CUSTOM MLP LAYER TO BERT
 
+- THIS WEEKEND ADD CUSTOM MLP LAYER TO BERT Done
+- Change the loss function
 - Multi Sample Dropout not working well
 - Mean Max head: not working well
 - try convolutional heads
