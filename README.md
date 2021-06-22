@@ -12,7 +12,8 @@
 * 16/06/2021: Task adaptive learning following this paper https://arxiv.org/pdf/2004.10964.pdf and hugging face notebook https://github.com/huggingface/blog/blob/master/notebooks/01_how_to_train.ipynb. Interesting paper introducing differential learning rate: https://arxiv.org/pdf/1801.06146.pdf
 * 19/06/2021 - 20/06/2021: Read the folling paper about how to fine tune bert https://arxiv.org/pdf/1905.05583.pdf. Trained a simple MLP model. Add hidden layer of the MLP to BERT and creater an inference pipeline. 
 * 21/06/2021: Finished the MLP and bert + MLP hidden layer. Submission tomorrow.
-* 22/06/2021: TO DO: read the following paper about weight initialization techniques for pretrained LM: https://arxiv.org/pdf/2002.06305.pdf + read the following paper about optimizing deeper transformer on small datasets: https://arxiv.org/pdf/2012.15355.pdf
+* 22/06/2021: Read the paper revisiting few sample bert fine tuning https://arxiv.org/pdf/2006.05987.pdf
+* 23/06/2021: TO DO: read the following paper about weight initialization techniques for pretrained LM: https://arxiv.org/pdf/2002.06305.pdf + read the following paper about optimizing deeper transformer on small datasets: https://arxiv.org/pdf/2012.15355.pdf
 
 ## Things to try
 
@@ -33,6 +34,14 @@
 - try to add custom features: https://www.kaggle.com/ravishah1/readability-feature-engineering-non-nn-baseline / https://arxiv.org/pdf/2010.09078.pdf
 - Use simple LSTM then concat with mlp hidden layer (no one do it but good results in two papers about it. I will try it after tuning the Bert Model).
 - try data augmtentation: from english to french, from french to english
+
+## Papers to look at
+
+* About bert stability: https://arxiv.org/pdf/2006.04884.pdf
+
+## Notebooks to look at
+
+* https://www.kaggle.com/rhtsingh/on-stability-of-few-sample-transformer-fine-tuning?scriptVersionId=65609052
 
 ## To Study
 
