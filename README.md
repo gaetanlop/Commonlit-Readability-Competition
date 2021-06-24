@@ -14,6 +14,7 @@
 * 21/06/2021: Finished the MLP and bert + MLP hidden layer. Submission tomorrow.
 * 22/06/2021: Read the paper revisiting few sample bert fine tuning https://arxiv.org/pdf/2006.05987.pdf. Problem with kaggle API Bad request error 404 ... I can not upload my models to kaggle. Will retry tomorrow. It was working yesterday.
 * 23/06/2021: TO DO: read the following paper about weight initialization techniques for pretrained LM: https://arxiv.org/pdf/2002.06305.pdf + read the following paper about optimizing deeper transformer on small datasets: https://arxiv.org/pdf/2012.15355.pdf
+* 24/06/2021: learned about pytorch data samplers and sequence bucketing using the following notebook: https://www.kaggle.com/shahules/guide-pytorch-data-samplers-sequence-bucketing
 
 ## Things to try
 
