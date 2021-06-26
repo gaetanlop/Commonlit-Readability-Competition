@@ -16,6 +16,7 @@
 * 23/06/2021: TO DO: read the following paper about weight initialization techniques for pretrained LM: https://arxiv.org/pdf/2002.06305.pdf + read the following paper about optimizing deeper transformer on small datasets: https://arxiv.org/pdf/2012.15355.pdf
 * 24/06/2021: learned about pytorch data samplers and sequence bucketing using the following notebook: https://www.kaggle.com/shahules/guide-pytorch-data-samplers-sequence-bucketing
 * 25/06/2021: there was a problem with my roberta+MLP model ... I am still working on it.
+* 26/06/2021: first inference with roberta + MLP gave 0.508 in leaderboard.
 
 ## Things to try
 
