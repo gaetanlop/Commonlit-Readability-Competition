@@ -20,6 +20,7 @@
 * 27/06/2021: retrain the model with a new architecture and training pipeline. Inference CV: 0.43 LB: 0.487. Read the following papers about adding numerical features to bert: https://arxiv.org/pdf/2106.07935.pdf + https://arxiv.org/pdf/2103.04083v1.pdf (hierarchical transformers) + bonne vidéo introductive sur le mécanisme d'attention https://www.youtube.com/watch?v=LALTmQhVkfU.
 * Single Roberta model cv 0.472 LB 0.481
 * 28/06/2021: Found a new channel discussing about bert (very interesting): https://www.youtube.com/c/ChrisMcCormickAI/videos. Great overview of Bert: https://www.youtube.com/watch?v=TQQlZhbC5ps&t=638s. Read a second time the blog http://jalammar.github.io/illustrated-transformer/ explaining transformers.
+* 01/07/2021:  https://www.youtube.com/watch?v=x66kkDnbzi4&list=PLam9sigHPGwOBuH4_4fr-XvDbe5uneaf6&index=3 + study the following notebook which introduces attention head https://www.kaggle.com/andretugan/pre-trained-roberta-solution-in-pytorch
 
 ## Things to try
 
