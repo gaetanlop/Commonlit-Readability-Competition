@@ -25,7 +25,11 @@
 * 04/07/2021: https://www.youtube.com/watch?v=YIEe7d7YqaU + https://www.youtube.com/watch?v=0U1irnILcN0 about bert inner workings. https://aclanthology.org/2021.maiworkshop-1.10.pdf paper about learning tabular and text data with transformers.
 
 * Found a very interesting blog about NLP: https://mccormickml.com/
-* 
+* Add directly the numerical features then concat the attention layer or multi headed self attention layer check https://aclanthology.org/2021.maiworkshop-1.10.pdf github. Test the different possibilities. But tomorrow first understand and finetune the following notebook : https://www.kaggle.com/andretugan/lightweight-roberta-solution-in-pytorch
+* Add 
+
+
+
 ## Things to try
 
 
