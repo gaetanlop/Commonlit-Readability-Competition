@@ -25,6 +25,7 @@
 * 04/07/2021: https://www.youtube.com/watch?v=YIEe7d7YqaU + https://www.youtube.com/watch?v=0U1irnILcN0 about bert inner workings. https://aclanthology.org/2021.maiworkshop-1.10.pdf paper about learning tabular and text data with transformers.
 * 05/07/2021: followed the following notebook to undertsnad optimizers: https://www.kaggle.com/andretugan/lightweight-roberta-solution-in-pytorch
 * 07/07/2021: implemented layer wise learning rate
+* 13/07/2021: Tried layer wise learning rate + freezing + read the paper antoher time https://arxiv.org/pdf/1905.05583.pdf
 * IDEA / TRAIN THE MODEL ON CLASSIFICATION THEN REGRESSION TASK or combine two bert models one on classification and the other on regression task.
 
 * Found a very interesting blog about NLP: https://mccormickml.com/
