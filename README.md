@@ -26,6 +26,7 @@
 * 05/07/2021: followed the following notebook to undertsnad optimizers: https://www.kaggle.com/andretugan/lightweight-roberta-solution-in-pytorch
 * 07/07/2021: implemented layer wise learning rate
 * 13/07/2021: Tried layer wise learning rate + freezing + read the paper antoher time https://arxiv.org/pdf/1905.05583.pdf Layer wise lr not adding much. Try freezing only some layers of roberta.
+* 19/07/2021: find similarities between text but not the same score. Need to find a way to deal with this noisy samples.
 * IDEA / TRAIN THE MODEL ON CLASSIFICATION THEN REGRESSION TASK or combine two bert models one on classification and the other on regression task.
 
 * Found a very interesting blog about NLP: https://mccormickml.com/
