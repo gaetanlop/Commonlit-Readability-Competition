@@ -27,6 +27,8 @@
 * 07/07/2021: implemented layer wise learning rate
 * 13/07/2021: Tried layer wise learning rate + freezing + read the paper antoher time https://arxiv.org/pdf/1905.05583.pdf Layer wise lr not adding much. Try freezing only some layers of roberta.
 * 19/07/2021: find similarities between text but not the same score. Need to find a way to deal with this noisy samples.
+* 20/07/2021: Leaned about bradley terry algo. Tried to remove outliers and change the loss function to weight each samples differently based on its standard error. It did not wrok. Currently working on a new wqy to pretrain a model with bins. Need to try xgb or svm on CLS token + numerical features.
+* 
 * IDEA / TRAIN THE MODEL ON CLASSIFICATION THEN REGRESSION TASK or combine two bert models one on classification and the other on regression task.
 
 * Found a very interesting blog about NLP: https://mccormickml.com/
