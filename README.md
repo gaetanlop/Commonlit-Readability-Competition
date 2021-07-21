@@ -28,13 +28,20 @@
 * 13/07/2021: Tried layer wise learning rate + freezing + read the paper antoher time https://arxiv.org/pdf/1905.05583.pdf Layer wise lr not adding much. Try freezing only some layers of roberta.
 * 19/07/2021: find similarities between text but not the same score. Need to find a way to deal with this noisy samples.
 * 20/07/2021: Leaned about bradley terry algo. Tried to remove outliers and change the loss function to weight each samples differently based on its standard error. It did not wrok. Currently working on a new wqy to pretrain a model with bins. Need to try xgb or svm on CLS token + numerical features.
-* 
+* 21/07/2021: Tried to binarize the target variable and train on bert model on a classification task. Use this model as a pretrained model. Currently under testing.
+* https://www.kaggle.com/rhtsingh/utilizing-transformer-representations-efficiently learning from this notebook different head for bert.
+
+
 * IDEA / TRAIN THE MODEL ON CLASSIFICATION THEN REGRESSION TASK or combine two bert models one on classification and the other on regression task.
 
 * Found a very interesting blog about NLP: https://mccormickml.com/
 * Add directly the numerical features then concat the attention layer or multi headed self attention layer check https://aclanthology.org/2021.maiworkshop-1.10.pdf github. Test the different possibilities. But tomorrow first understand and finetune the following notebook : https://www.kaggle.com/andretugan/lightweight-roberta-solution-in-pytorch
 
+## Tomorrow
 
+* Concat results of the bert model trained on classification task to the one trained on regression task. Build an MLP on top of that. 
+* Build a pipeline to test different seeds
+* Try mean pooling.
 
 
 ## Things to try
