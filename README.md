@@ -31,6 +31,8 @@
 * 21/07/2021: Tried to binarize the target variable and train on bert model on a classification task. Use this model as a pretrained model. Currently under testing.
 * https://www.kaggle.com/rhtsingh/utilizing-transformer-representations-efficiently learning from this notebook different head for bert.
 * 22/07/2021: Bert paper https://arxiv.org/pdf/1810.04805.pdf + understanding feature extraction with bert https://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/.
+* Learn about layer reinitialization and implement it (https://arxiv.org/pdf/2006.05987.pdf) + learned about mixout (https://arxiv.org/pdf/1909.11299.pdf) and implement it. Both techniques yields to better results on cv ! 
+* 23/07/2021: Learning SWA.
 
 
 * IDEA / TRAIN THE MODEL ON CLASSIFICATION THEN REGRESSION TASK or combine two bert models one on classification and the other on regression task.
