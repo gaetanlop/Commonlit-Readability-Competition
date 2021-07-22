@@ -30,6 +30,7 @@
 * 20/07/2021: Leaned about bradley terry algo. Tried to remove outliers and change the loss function to weight each samples differently based on its standard error. It did not wrok. Currently working on a new wqy to pretrain a model with bins. Need to try xgb or svm on CLS token + numerical features.
 * 21/07/2021: Tried to binarize the target variable and train on bert model on a classification task. Use this model as a pretrained model. Currently under testing.
 * https://www.kaggle.com/rhtsingh/utilizing-transformer-representations-efficiently learning from this notebook different head for bert.
+* 22/07/2021: Bert paper https://arxiv.org/pdf/1810.04805.pdf + understanding feature extraction with bert https://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/.
 
 
 * IDEA / TRAIN THE MODEL ON CLASSIFICATION THEN REGRESSION TASK or combine two bert models one on classification and the other on regression task.
