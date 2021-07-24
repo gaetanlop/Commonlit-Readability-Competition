@@ -33,6 +33,7 @@
 * 22/07/2021: Bert paper https://arxiv.org/pdf/1810.04805.pdf + understanding feature extraction with bert https://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/.
 * Learn about layer reinitialization and implement it (https://arxiv.org/pdf/2006.05987.pdf) + learned about mixout (https://arxiv.org/pdf/1909.11299.pdf) and implement it. Both techniques yields to better results on cv ! 
 * 23/07/2021: Learned SWA and implement it https://arxiv.org/pdf/1803.05407.pdf + https://pytorch.org/blog/pytorch-1.6-now-includes-stochastic-weight-averaging/
+* 24/07/2021: Understand how to get correlation between lb and cv by adding mroe regularization. Leads to worst cv but better correlation between lb and cv.
 * Try pseudo labeling with std
 
 
