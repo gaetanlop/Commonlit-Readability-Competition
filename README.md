@@ -36,7 +36,7 @@
 * 24/07/2021: Understand how to get correlation between lb and cv by adding mroe regularization. Leads to worst cv but better correlation between lb and cv.
 * 25/07/2021: Trying to understand if adding an MLP trained on numerical features could help base roberta. 0.491 for unique Roberta and 0.58 for the MLP on LB. 
 * 26/07/2021: Read the following paper about bert instability https://arxiv.org/pdf/2006.04884.pdf. Ways to solve: increase the number of training iterations even if 0 loss.
-* 27/07/2021: Smart Batching understanding + Implementation (https://www.kaggle.com/rhtsingh/speeding-up-transformer-w-optimization-strategies) + Undertsanding MTL + implementation (https://ruder.io/multi-task/ + https://www.kaggle.com/c/commonlitreadabilityprize/discussion/238384). MTL implementation did not improve CV ... + Created a simple baseline for roberta Large.
+* 27/07/2021: Smart Batching understanding + Implementation (https://www.kaggle.com/rhtsingh/speeding-up-transformer-w-optimization-strategies) + Undertsanding MTL + implementation (https://ruder.io/multi-task/ + https://www.kaggle.com/c/commonlitreadabilityprize/discussion/238384). MTL implementation did not improve CV ... + Created a simple baseline for roberta Large. + Read Electra paper https://arxiv.org/pdf/2003.10555.pdf
 
 
 
