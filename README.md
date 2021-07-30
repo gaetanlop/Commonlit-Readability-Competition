@@ -38,7 +38,7 @@
 * 26/07/2021: Read the following paper about bert instability https://arxiv.org/pdf/2006.04884.pdf. Ways to solve: increase the number of training iterations even if 0 loss.
 * 27/07/2021: Smart Batching understanding + Implementation (https://www.kaggle.com/rhtsingh/speeding-up-transformer-w-optimization-strategies) + Undertsanding MTL + implementation (https://ruder.io/multi-task/ + https://www.kaggle.com/c/commonlitreadabilityprize/discussion/238384). MTL implementation did not improve CV ... + Created a simple baseline for roberta Large. + Read Electra paper https://arxiv.org/pdf/2003.10555.pdf
 * 28/07/2021: Undertsanding the following blog post about samplers, dataloader, collators https://www.scottcondron.com/jupyter/visualisation/audio/2020/12/02/dataloaders-samplers-collate.html#SequentialSampler. + Finish smart batching implementation (leads to worst cv and lb scores ...). Roberta Large perform better than roberta base on lb but not on cv. Read the following paper comparing fine tuning to feature extractor https://arxiv.org/pdf/1903.05987.pdf. Read the paper about seeds https://arxiv.org/pdf/2002.06305.pdf then created a notebook to find the best seeds ! 
-* 30/07/2021: Read the following paper about unsupervised data augmentation https://arxiv.org/pdf/1904.12848.pdf. Do not have time to implement it but will do it after the competition ends.
+* 30/07/2021: Read the following paper about unsupervised data augmentation https://arxiv.org/pdf/1904.12848.pdf. Do not have time to implement it but will do it after the competition ends. Tried to mask words randomly during training but it seems that it hurts training performance.
 * 
 
 
