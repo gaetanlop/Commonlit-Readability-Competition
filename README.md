@@ -40,6 +40,7 @@
 * 28/07/2021: Undertsanding the following blog post about samplers, dataloader, collators https://www.scottcondron.com/jupyter/visualisation/audio/2020/12/02/dataloaders-samplers-collate.html#SequentialSampler. + Finish smart batching implementation (leads to worst cv and lb scores ...). Roberta Large perform better than roberta base on lb but not on cv. Read the following paper comparing fine tuning to feature extractor https://arxiv.org/pdf/1903.05987.pdf. Read the paper about seeds https://arxiv.org/pdf/2002.06305.pdf then created a notebook to find the best seeds ! 
 * 30/07/2021: Read the following paper about unsupervised data augmentation https://arxiv.org/pdf/1904.12848.pdf. Do not have time to implement it but will do it after the competition ends. Tried to mask words randomly during training but it seems that it hurts training performance. Completely understood how to finetune roberta large for this dataset (no dropout but layer norm + attention or mean head. The learning rate is very important. Decay learning rate works way better than layer wise elarning rate !).
 * 01/08/2021: Creating blending scripts with optuna + training funnel models (paper: https://arxiv.org/abs/2006.03236)
+* Top 10% submission. Create another Roberta with Max Len 300 and tried again MLP + Roberta (did not work !)
 
 
 
