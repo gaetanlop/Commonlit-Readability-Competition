@@ -42,6 +42,7 @@
 * 01/08/2021: Creating blending scripts with optuna + training funnel models (paper: https://arxiv.org/abs/2006.03236)
 * Top 10% submission. Create another Roberta with Max Len 300 and tried again MLP + Roberta (did not work !)
 * 02/08/2021: Keep trying to work on my blending. Learned about Deberta https://arxiv.org/abs/2006.03654. Trying to finetune it.
+* 31/08/2021: Started to look at top solutions
 
 
 
