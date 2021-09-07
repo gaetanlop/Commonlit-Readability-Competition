@@ -56,7 +56,8 @@
 
 ## Best solutions
 ### From 1100 to 40 th
-https://www.youtube.com/watch?v=XLaq-boyAGk&t=10s
+* https://www.youtube.com/watch?v=XLaq-boyAGk&t=10s
+* https://github.com/VigneshBaskar/kaggle_commonlit/blob/main/solution_walkthrough.ipynb
 
 ## Tomorrow
 
