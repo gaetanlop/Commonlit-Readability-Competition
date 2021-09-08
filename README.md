@@ -96,6 +96,15 @@
 * Use external data from simplewiki, wikipedia and book corpus
 * Sentence Bert paper: https://arxiv.org/abs/1908.10084
 
+### Single PairWise model
+* https://www.kaggle.com/c/commonlitreadabilityprize/discussion/258283
+* Interesting idea to try.
+
+### An Alternative Approach - Compare Excerpts
+* https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257446
+* Interesting idea to try also for pretraining for example
+
+
 
 ## Things to try
 
