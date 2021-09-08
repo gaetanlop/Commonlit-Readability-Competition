@@ -55,19 +55,46 @@
 * Add directly the numerical features then concat the attention layer or multi headed self attention layer check https://aclanthology.org/2021.maiworkshop-1.10.pdf github. Test the different possibilities. But tomorrow first understand and finetune the following notebook : https://www.kaggle.com/andretugan/lightweight-roberta-solution-in-pytorch
 
 ## Best solutions
+
+* Different models : roberta large, electra large, deberta large, luke large, funnel large
+* key parameters: lerning rate, head, dropout removal, pseudo labeling, activation, loss function
+* 
 ### From 1100 to 40 th in 3 days
 * https://www.youtube.com/watch?v=XLaq-boyAGk&t=10s
 * https://github.com/VigneshBaskar/kaggle_commonlit/blob/main/solution_walkthrough.ipynb
 * Pretraining using wikipedia data using rankingloss
-* mask added attention head
+* Mask added attention head
 * Layer wise learning rate
 
-## Tomorrow
+### 6th place solution (Gaussian process regression (GPR))
+* https://www.kaggle.com/c/commonlitreadabilityprize/discussion/258554
+* Pseudo labelling + GPR
+* Change pretrained models to squad and triviaqa
+* Dropout Removal
 
-* Build a pipeline to test different seeds
+### Private 22nd Place solution
+* gradient clipping 
+* reinitialize last layers
+* LSTM heads
+
+### 9th place solution -Ensemble of four models
+* cross validation strategy: increase the number of folds to 15.
+* use deberta base to find best params for deberta large. use this paper: https://arxiv.org/pdf/2006.04884.pdf
+* BCEWithLogitsLoss as a loss function "we trained BCEWithLogitsLoss using Sigmoid(target-Median(target)) as the prediction label. Median(target) was added to the regressor during prediction"
+
+### 15th Place
+* https://www.kaggle.com/c/commonlitreadabilityprize/discussion/260800
+* SVR head
+
+### 1st place solution - external data, teacher/student and sentence transformers
+* https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844
+* "made a large collection of external data. I used sentence bert (Reimers and Gurevych 2019 - https://github.com/UKPLab/sentence-transformers) to select for each excerpt in the train set the 5 most similar snippets in the external data collection"
+* trained some different models on the pseudo-labeled data for 1-4 epochs. After training on the pseudo-labeled data, I trained each model on the original training set. 
+* Use external data from simplewiki, wikipedia and book corpus
+* Sentence Bert paper: https://arxiv.org/abs/1908.10084
+
 
 ## Things to try
-
 
 - THIS WEEKEND ADD CUSTOM MLP LAYER TO BERT Done
 - Change the loss function
