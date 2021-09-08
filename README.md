@@ -109,6 +109,14 @@
 
 You want to explain a topic to someone (kids, novice, expert), you have multiple definitions that comes to your mind, using the api decide the definition you should chose. First the user enter for what type of person he wants to give this definition. Then, enters 2 to 3 diffzerent definitions. After that, the model will select the most suitable one for the usecase. Deploy on AWS or Heroku or maybe on tensorflow lite.
 
+## Proposition for the PFE
+
+* Find external datasets (sentence bert)
+* Improve models using pseudo labeling 
+* Try to use differential learnign rate/ bigger k/ remove all dropout
+* Try new loss functions / Different heads
+* Train at least 2 different single models like electra deberta funnel or roberta
+
 ## Things to try
 
 - THIS WEEKEND ADD CUSTOM MLP LAYER TO BERT Done
