@@ -65,6 +65,7 @@
 ### From 1100 to 40 th in 3 days
 * https://www.youtube.com/watch?v=XLaq-boyAGk&t=10s
 * https://github.com/VigneshBaskar/kaggle_commonlit/blob/main/solution_walkthrough.ipynb
+* https://www.kaggle.com/c/commonlitreadabilityprize/discussion/258363
 * Pretraining using wikipedia data using rankingloss
 * Mask added attention head
 * Layer wise learning rate
@@ -104,14 +105,13 @@
 * https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257446
 * Interesting idea to try also for pretraining for example
 
-
 ## Project Idea
 
 You want to explain a topic to someone (kids, novice, expert), you have multiple definitions that comes to your mind, using the api decide the definition you should chose. First the user enter for what type of person he wants to give this definition. Then, enters 2 to 3 diffzerent definitions. After that, the model will select the most suitable one for the usecase. Deploy on AWS or Heroku or maybe on tensorflow lite.
 
 ## Proposition for the PFE
 
-* Find external datasets (sentence bert)
+* Find external datasets (sentence bert) (https://www.kaggle.com/markwijkhuizen/discussion)
 * Improve models using pseudo labeling 
 * Try to use differential learnign rate/ bigger k/ remove all dropout
 * Create a script to reset training if it diverges (example seed/ mlm or not)
