@@ -58,7 +58,10 @@
 
 * Different models : roberta large, electra large, deberta large, luke large, funnel large
 * key parameters: lerning rate, head, dropout removal, pseudo labeling, activation, loss function
-* 
+* Importance of model diversity
+* Make sure that external datasets are representative of the training data
+* try a bigger k in kfold cross val to have a better cross validation strategy
+
 ### From 1100 to 40 th in 3 days
 * https://www.youtube.com/watch?v=XLaq-boyAGk&t=10s
 * https://github.com/VigneshBaskar/kaggle_commonlit/blob/main/solution_walkthrough.ipynb
