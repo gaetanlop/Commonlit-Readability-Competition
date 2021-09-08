@@ -115,6 +115,7 @@ You want to explain a topic to someone (kids, novice, expert), you have multiple
 * Improve models using pseudo labeling 
 * Try to use differential learnign rate/ bigger k/ remove all dropout
 * Try new loss functions / Different heads
+* Try single pairwise model
 * Train at least 2 different single models like electra deberta funnel or roberta
 
 ## Things to try
