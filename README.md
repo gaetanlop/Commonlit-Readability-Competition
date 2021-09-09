@@ -62,6 +62,8 @@
 * Make sure that external datasets are representative of the training data
 * try a bigger k in kfold cross val to have a better cross validation strategy
 
+* Google sheet link for experiments https://docs.google.com/spreadsheets/d/1zMy1EWSGylj0xPF-PY_FLF2q1VUcLISbPF_MRbO-xGw/edit?usp=sharing
+
 ### From 1100 to 40 th in 3 days
 * https://www.youtube.com/watch?v=XLaq-boyAGk&t=10s
 * https://github.com/VigneshBaskar/kaggle_commonlit/blob/main/solution_walkthrough.ipynb
