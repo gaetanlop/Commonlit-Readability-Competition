@@ -98,6 +98,8 @@
 * trained some different models on the pseudo-labeled data for 1-4 epochs. After training on the pseudo-labeled data, I trained each model on the original training set. 
 * Use external data from simplewiki, wikipedia and book corpus
 * Sentence Bert paper: https://arxiv.org/abs/1908.10084
+* https://www.sbert.net/
+
 
 ### Single PairWise model
 * https://www.kaggle.com/c/commonlitreadabilityprize/discussion/258283
