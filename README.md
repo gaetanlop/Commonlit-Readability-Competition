@@ -124,11 +124,10 @@ You want to explain a topic to someone (kids, novice, expert), you have multiple
 * Train at least 2 different single models like electra deberta funnel or roberta
 * Deploy the web app and create an article on medium explaining how to turn a kaggle competitions into an application (explain everyhting about what we used to create the model and the deployment part).
 
-## Questions
+## Weight and Biases learning
 
-* Best path to follow to get the best internship (open source, projects, or kaggle competitions)
-* How to contribute to open source projects (medium, kaggle kernels, github repos)
-* Best internships
+* https://theaisummer.com/weights-and-biases-tutorial/
+* https://towardsdatascience.com/machine-learning-experiment-tracking-93b796e501b0
 
 ## Things to try
 
