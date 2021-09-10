@@ -99,6 +99,7 @@
 * Use external data from simplewiki, wikipedia and book corpus
 * Sentence Bert paper: https://arxiv.org/abs/1908.10084
 * https://www.sbert.net/
+* https://github.com/mathislucka/kaggle_clrp_1st_place_solution
 
 
 ### Single PairWise model
