@@ -43,6 +43,7 @@
 * Top 10% submission. Create another Roberta with Max Len 300 and tried again MLP + Roberta (did not work !)
 * 02/08/2021: Keep trying to work on my blending. Learned about Deberta https://arxiv.org/abs/2006.03654. Trying to finetune it.
 * 31/08/2021: Started to look at top solutions
+* 11-12/09/2021: understanding of sentence berte https://arxiv.org/pdf/1908.10084.pdf
 
 
 
