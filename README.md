@@ -118,6 +118,7 @@ You want to explain a topic to someone (kids, novice, expert), you have multiple
 
 ## Proposition for the PFE
 
+* weights and biases dashboard: https://wandb.ai/ruchi798/commonlit?workspace=user-ruchi798
 * Find external datasets (sentence bert) (https://www.kaggle.com/markwijkhuizen/discussion)
 * Improve models using pseudo labeling 
 * Try to use differential learnign rate/ bigger k/ remove all dropout
