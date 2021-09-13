@@ -45,6 +45,7 @@
 * 31/08/2021: Started to look at top solutions
 * 11-12/09/2021: understanding of sentence berte https://arxiv.org/pdf/1908.10084.pdf
 * Very interesting paper about self training https://arxiv.org/format/2010.02194
+* 13/09/2021: interesting article about semantic search + creation of the script to get external data
 
 
 
