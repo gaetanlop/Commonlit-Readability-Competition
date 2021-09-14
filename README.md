@@ -1,5 +1,11 @@
 # Commonlit-Readability
 
+## Reimplementation Schedule
+
+* Get all external data and their embeddings (done)
+* Create a strong model to label external data (in process)
+* Pseudo Label external data (Script Done)
+* Training pipeline for roberta large, roberta base, electra large, deberta large
 
 ## What I have done
 
