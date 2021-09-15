@@ -2,8 +2,8 @@
 
 ## Reimplementation Schedule
 
-* Get all external data and their embeddings from simple wiki, wikipedia, children's book test, and OneStopEnglishCropus.
-* Create a strong model to label external data (in process)
+* Get all external data and their embeddings from simple wiki, wikipedia, children's book test, and OneStopEnglishCropus (Done).
+* Create a strong model to label external data (in process). 0.465 on CV
 * Pseudo Label external data (Script Done)
 * Training pipeline for roberta large, roberta base, electra large, deberta large
 
