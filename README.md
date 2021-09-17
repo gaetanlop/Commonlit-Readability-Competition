@@ -3,9 +3,9 @@
 ## Reimplementation Schedule
 
 * Get all external data and their embeddings from simple wiki, wikipedia, children's book test, and OneStopEnglishCropus (Done).
-* Use best models for pseudo labeling
-* Pseudo Label external data (Script Done) (Idea based on the paper self training https://openaccess.thecvf.com/content_CVPR_2020/papers/Xie_Self-Training_With_Noisy_Student_Improves_ImageNet_Classification_CVPR_2020_paper.pdf.
-* Training pipeline for roberta large, roberta base, electra large, deberta large, funnel large
+* Use best models for pseudo labeling (Done)
+* Pseudo Label external data (Script Done) (Idea based on the paper self training https://openaccess.thecvf.com/content_CVPR_2020/papers/Xie_Self-Training_With_Noisy_Student_Improves_ImageNet_Classification_CVPR_2020_paper.pdf.) (Done)
+* Training pipeline for roberta large, roberta base, electra large, deberta large, funnel large (Today and tomorrow)
 
 * What to do next ? https://towardsdatascience.com/what-i-learned-from-stanfords-covid-mrna-vaccine-kaggle-competition-98d3f454eef. Write an article about top solutions like this one.
 
