@@ -1,5 +1,9 @@
 # Commonlit-Readability
 
+## Tomorrow
+
+* Script for Deberta with layerwize learning rate + Script for the smallest bert ever to deploy it. I need to have both the models.
+
 ## Reimplementation Schedule
 
 * Get all external data and their embeddings from simple wiki, wikipedia, children's book test, and OneStopEnglishCropus (Done).
