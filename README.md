@@ -11,6 +11,9 @@
 * Pseudo Label external data (Script Done) (Idea based on the paper self training https://openaccess.thecvf.com/content_CVPR_2020/papers/Xie_Self-Training_With_Noisy_Student_Improves_ImageNet_Classification_CVPR_2020_paper.pdf.) (Done)
 * Training pipeline for roberta large, roberta base, electra large, deberta large, funnel large (Today and tomorrow).
 * Succesfully reproduced Electra large results with lb 0.461
+* Roberta Large results did not improve.
+* Currently training deberta large
+* Also DistilBert for future deployment
 * Two possibilities to train the models: train on both pseudo labels and training set at the same time, or train on pseudo then training set.
 
 * What to do next ? https://towardsdatascience.com/what-i-learned-from-stanfords-covid-mrna-vaccine-kaggle-competition-98d3f454eef. Write an article about top solutions like this one.
