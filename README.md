@@ -2,7 +2,7 @@
 
 ## Tomorrow
 
-* Script for Deberta with layerwize learning rate + Script for the smallest bert ever to deploy it. I need to have both the models.
+* Try layerwize learning rate + Productionization https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2 + https://www.youtube.com/watch?v=nUOh_lDMHOU&t=717s
 
 ## Reimplementation Schedule
 
