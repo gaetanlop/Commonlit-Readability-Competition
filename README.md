@@ -2,7 +2,7 @@
 
 ## Tomorrow
 
-* Try layerwize learning rate + Productionization https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2 + https://www.youtube.com/watch?v=nUOh_lDMHOU&t=717s
+* Try layerwize learning rate using the notebook with the perfect head (see solutions) + Productionization https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2 + https://www.youtube.com/watch?v=nUOh_lDMHOU&t=717s
 
 ## Reimplementation Schedule
 
