@@ -32,6 +32,9 @@ I then tried Stochastic Weight Averaging (SWA) that improved a bit my CV and LB 
 As many kagglers where talking about the importance of  ensembles, I looked at different way to decrease inference time. I used Smart Batching for inference but for training it hurts oo much the performance (it was still a great way to experiment faster).
 At the end, my final submission was just a blending of Roberta large with mean pooling, Roberta large with attention pooling, Roberta base with attention pooling and electra large with mean pooling (you can find the notebook in (path for the notebook for inference). Some of them where trained with layer wise learing rate and some with decay learning rate.
 
+## Best solutions Overview
+
+
 
 ## Code and Resources Used
 
