@@ -2,8 +2,15 @@
 **Final product hosted on Heroku:** https://text-comparator.herokuapp.com/
 
 ## Competition Overview
-* In the competition overview put what it is about, then the key to succes in this competition. Then say that you will explain the path to the 18th top later!
-* key to succes: stabilizing transformer raining, noise, large models, dropout removal.
+
+* The goal of the competition is to create machine learning models to evaluate the reading level of passages of text. Being able to rate the complexity of a text is important for improving students reading capabilities. Indeed, studies show that students can make faster progress in learning if they are taught with texts just above their reading capabilities (“https://mydigitalpublication.com/publication/?m=13959&i=644729&p=18&ver=html5”). Assessing the level of a text has always been a challenging task and a lot of methods have been developed in order to provide students with appropriate texts. These methods are based on “weak proxies of text decoding (i.e., characters or syllables per word) and syntactic complexity (i.e., number or words per sentence)” (https://www.kaggle.com/c/commonlitreadabilityprize). The final goal is to create machine learning models that could be used by literacy curriculum developers and teachers to choose the best passages for their classrooms. Also, with this kind of algorithms, students could receive feedbacks on their complexity and readability of their work.
+* In this competition, I finished in the top 18% (I had a submission for the top 8% but I did not choose it as my final submission) over 3633 teams. In my opinion, there was five main points of succes in the competition:
+- Stabilize the training of transformers: the targets were very noisy 
+- Evaluate the performance of our models within each epochs and not just after each epochs
+- Setting Dropout parameters of the transformers model to 0
+- Finding appropriate datasets for pseudo labeling: the training set is very small
+- Create a good ensemble: we had 3 hours to make predictions
+* We will cover all that points later in this documentation.
 
 ## Project Overview
  * problem with kaggle competitions they only cover one part of a machine learning project. Therefore I wanted to go further by two ways.
