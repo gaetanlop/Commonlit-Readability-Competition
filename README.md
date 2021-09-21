@@ -2,9 +2,12 @@
 **Final product hosted on Heroku:** https://text-comparator.herokuapp.com/
 
 ## Competition Overview
-
+* In the competition overview put what it is about, then the key to succes in this competition. Then say that you will explain the path to the 18th top later!
+* key to succes: stabilizing transformer raining, noise, large models, dropout removal.
 
 ## Project Overview
+ * problem with kaggle competitions they only cover one part of a machine learning project. Therefore I wanted to go further by two ways.
+ * Trying to reproduce what the winners of the competition did and creating a web app to compare texts.
 
 
 
