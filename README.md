@@ -1,6 +1,12 @@
-# Commonlit-Readability
+# CommonLit Readability Prize Competition (Kaggle): Competition and Project Overview
+**Final product hosted on Heroku:** https://text-comparator.herokuapp.com/
+
+## Competition Overview
+
 
 ## Project Overview
+
+
 
 ## Tomorrow
 
