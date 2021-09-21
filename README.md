@@ -34,7 +34,7 @@ At the end, my final submission was just a blending of Roberta large with mean p
 
 ## Best solutions Overview
 
-
+## How to use this repository
 
 ## Code and Resources Used
 
@@ -43,11 +43,9 @@ At the end, my final submission was just a blending of Roberta large with mean p
 **For Web Framework Requirements:** ```pip install -r requirements.txt```
 
 **Flask Productionization:** https://pytorch.org/tutorials/intermediate/flask_rest_api_tutorial.html
+* PUT TORCH NOTEBOOKS
  
-
-## Tomorrow
-
-* Try layerwize learning rate using the notebook with the perfect head (see solutions)
+## Good ressources for NLP
 
 ## Reimplementation Schedule
 
@@ -200,24 +198,6 @@ You want to explain a topic to someone (kids, novice, expert), you have multiple
 * https://theaisummer.com/weights-and-biases-tutorial/
 * https://towardsdatascience.com/machine-learning-experiment-tracking-93b796e501b0
 
-## Things to try
-
-- THIS WEEKEND ADD CUSTOM MLP LAYER TO BERT Done
-- Change the loss function
-- Multi Sample Dropout not working well
-- Mean Max head: not working well
-- try convolutional heads
-- try attention head
-- try pseudo labeling as the dataset is very small
-- More regularization techniques like batchnorm, layer norm work well
-- pretrain bert on our corpus Work well
-- Validate multiple times in one epoch Work well
-- Use Distillbert (smaller model)
-- character level bert / sentence level bert
-- Check the impact of the seed https://www.kaggle.com/khoongweihao/tse2020-roberta-cnn-random-seed-distribution
-- try to add custom features: https://www.kaggle.com/ravishah1/readability-feature-engineering-non-nn-baseline / https://arxiv.org/pdf/2010.09078.pdf
-- Use simple LSTM then concat with mlp hidden layer (no one do it but good results in two papers about it. I will try it after tuning the Bert Model).
-- try data augmtentation: from english to french, from french to english
 
 ## Papers to look at
 
