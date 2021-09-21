@@ -1,6 +1,8 @@
 # CommonLit Readability Prize Competition (Kaggle): Competition and Project Overview
 **Final product hosted on Heroku:** https://text-comparator.herokuapp.com/
 
+**Faire un menu deroulant
+
 ## Competition Overview
 
 * The goal of the competition is to create machine learning models to evaluate the reading level of passages of text. Being able to rate the complexity of a text is important for improving students reading capabilities. Indeed, studies show that students can make faster progress in learning if they are taught with texts just above their reading capabilities (“https://mydigitalpublication.com/publication/?m=13959&i=644729&p=18&ver=html5”). Assessing the level of a text has always been a challenging task and a lot of methods have been developed in order to provide students with appropriate texts. These methods are based on “weak proxies of text decoding (i.e., characters or syllables per word) and syntactic complexity (i.e., number or words per sentence)” (https://www.kaggle.com/c/commonlitreadabilityprize). The final goal is to create machine learning models that could be used by literacy curriculum developers and teachers to choose the best passages for their classrooms. Also, with this kind of algorithms, students could receive feedbacks on their complexity and readability of their work.
