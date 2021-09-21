@@ -1,5 +1,7 @@
 # Commonlit-Readability
 
+## Project Overview
+
 ## Tomorrow
 
 * Try layerwize learning rate using the notebook with the perfect head (see solutions)
