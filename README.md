@@ -17,6 +17,22 @@
 * I love Kaggle Competitions. This is a great way to learn a lot of things regarding the modeling part of a data science project. You can learn from an incredible community and you have also a feedback of what you have done compared to the others with the leaderboard. But kaggle misses some parts of a data science project like for example collecting the data and deploying the model in production. With respect to this last point, I decided to deploy one of my models and even to incorporate different techniques from the winners of the competition (web app link : https://text-comparator.herokuapp.com/). The goal of the web app is to compare the reading level of two different texts. Why is it useful to compare the reading level of two texts ? Have you ever been in a situation where you wanted to explain a complex subject to someone but too many definitions came to your mind so that you could not the most suitable one ? This web app will help you choose the most suitable definition to give to a novice. Under the hood, a bert model assesses the reading level of the two texts and then compare them and returns the most easy one (the model that I deployed is not the best one because of model size constarints for deployments.
 * I also tried to reproduce the best techniques that the winners of the Competition have used. At the end, it improved my model a lot.
 
+## Path to final submission
+
+* Before diving into the training of huge transformer models, I wanted to experiments wth simpler ones in order to create a baseline. At first, I generated different features based on usual readability formula and then trained a gradient boosting model on this generated dataset. I then switched to RNN, but they seemed to perform worse than gradient boosting and feature engineering models. Thus, I started to use transformers and learn about the hugging face library. 
+	Path to training bert models.
+
+* At first, the training was totally unstable. After reading the paper (paper name: https://arxiv.org/pdf/1801.06146.pdf) and after looking at the following notebook https://www.kaggle.com/rhtsingh/commonlit-readability-prize-roberta-torch-fit?scriptVersionId=64693127, I started to use layer wise learning rate. Layer wise learning rate and dropout removal enabled to stabilize the training of bert. Put a graph from wandb to show that. The problem with the instability of bert like models is very well known and is especially important for small datasets (like the one we were working with : less than 3000 training samples). Many papers tried to tackle this problem (https://arxiv.org/pdf/2006.05987.pdf +  https://arxiv.org/pdf/1905.05583.pdf + https://arxiv.org/pdf/2012.15355.pdf). 
+(Show both dropout removal and layer wise learning rate in code).
+After finding a way to stabilize the training of bert, I then tried to add numerical features to it following these papers advices ( https://arxiv.org/pdf/2106.07935.pdf + https://arxiv.org/pdf/2103.04083v1.pdf +  https://aclanthology.org/2021.maiworkshop-1.10.pdf). It improved my cv, but it seems that it was not generalizing to the public test set. I decided to give up with this idea.
+
+* I then tried different head for bert and tried to use them on different outputs from the encoder (pooler output, last hidden state, hidden states). In order to perform the best analysis as possible I ran all my experiments with 3 different seeds because of the randomness of transformers training. At the end, for my set up, it seems that the attention head and the mean pooling performed the best. I decided to keep focusing on these two heads for the rest of the competition.
+(Show the head in code)
+I then tried Stochastic Weight Averaging (SWA) that improved a bit my CV and LB score. Layer reinitialization was promising but did not work for my set up.
+As many kagglers where talking about the importance of  ensembles, I looked at different way to decrease inference time. I used Smart Batching for inference but for training it hurts oo much the performance (it was still a great way to experiment faster).
+At the end, my final submission was just a blending of Roberta large with mean pooling, Roberta large with attention pooling, Roberta base with attention pooling and electra large with mean pooling (you can find the notebook in (path for the notebook for inference). Some of them where trained with layer wise learing rate and some with decay learning rate.
+
+
 ## Code and Resources Used
 
 **Python Version:** 3.8
