@@ -55,7 +55,6 @@ Before diving into the training of huge transformer models, I wanted to experime
 
 * The problem with the instability of bert like models is very well known and is especially important for small datasets (like the one we were working with : less than 3000 training samples). Many papers tried to tackle this problem (please refer to these three papers : https://arxiv.org/pdf/2006.05987.pdf /  https://arxiv.org/pdf/1905.05583.pdf / https://arxiv.org/pdf/2012.15355.pdf). 
 
-(Show both dropout removal and layer wise learning rate in code).
 Code for dropout removal:
 
 ```{python}
@@ -68,6 +67,7 @@ model = transformers.AutoModel.from_pretrained(PATH, config=config)
 ```
 Code for layer wise learning rate:
 ```{python}
+from transformers import AdamW
 def create_optimizer(model):
     named_parameters = list(model.named_parameters()) 
     no_decay = ['bias', 'gamma', 'beta']   
@@ -106,12 +106,34 @@ def create_optimizer(model):
     return AdamW(parameters)
 ```
 
-
 After finding a way to stabilize the training of bert, I then tried to add numerical features to it following these papers advices ( https://arxiv.org/pdf/2106.07935.pdf + https://arxiv.org/pdf/2103.04083v1.pdf +  https://aclanthology.org/2021.maiworkshop-1.10.pdf). It improved my cv, but it seems that it was not generalizing to the public test set. I decided to give up with this idea.
 
 I then tried different head for bert and tried to use them on different outputs from the encoder (pooler output, last hidden state, hidden states). In order to perform the best analysis as possible, I ran all my experiments with 3 different seeds because of the randomness of transformers training. At the end, for my set up, it seems that the attention head and the mean pooling performed the best. I decided to keep focusing on these two heads for the rest of the competition.
 
-(Show the head in code)
+Idea come from [this notebook](https://www.kaggle.com/rhtsingh/utilizing-transformer-representations-efficiently)
+```{python}
+class MeanPooling(nn.Module):
+  def __init__(self):
+    super(MeanPooling, self).__init__()
+
+    self.linear1 = nn.Linear(1024, 768)
+    self.linear2 = nn.Linear(768, 1)
+    self.layer_norm1 = nn.LayerNorm(1024)
+    self.layer_norm2 = nn.LayerNorm(768)
+
+  def forward(last_hidden_state):
+
+    new_input_mask = mask.unsqueeze(-1).expand(last_hidden_state.size()).float()
+    add_embeddings = torch.sum(last_hidden_state * new_input_mask, 1)
+    add_mask = new_input_mask.sum(1)
+    add_mask = torch.clamp(add_mask, min=1e-9)
+    mean_embeddings = add_embeddings / add_mask
+    norm_mean_embeddings = self.layer_norm1(mean_embeddings)
+    logits = self.linear1(norm_mean_embeddings)
+    logits = self.linear2(self.layer_norm2(logits))
+
+    return logits
+````
 
 I then tried Stochastic Weight Averaging (SWA) that improved a bit my CV and LB score. Layer reinitialization was promising but did not work for my set up.
 As many kagglers where talking about the importance of  ensembles, I looked at different way to decrease inference time and thus incorporate more models in my submission. I used Smart Batching for inference, it worked well. I also tried to do it for training but it was hurting too much the performance of my models.
