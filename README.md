@@ -56,9 +56,54 @@ Before diving into the training of huge transformer models, I wanted to experime
 * The problem with the instability of bert like models is very well known and is especially important for small datasets (like the one we were working with : less than 3000 training samples). Many papers tried to tackle this problem (please refer to these three papers : https://arxiv.org/pdf/2006.05987.pdf /  https://arxiv.org/pdf/1905.05583.pdf / https://arxiv.org/pdf/2012.15355.pdf). 
 
 (Show both dropout removal and layer wise learning rate in code).
+Code for dropout removal:
+
 ```{python}
-x = 'hello, python world!'
-print(x.split(' '))
+from transformers import AutoModel, AutoConfig
+config = AutoConfig.from_pretrained(PATH)
+config.update({"hidden_dropout_prob": 0.0,
+               "attention_probs_dropout_prob": 0.0})   
+        
+model = transformers.AutoModel.from_pretrained(PATH, config=config)
+```
+Code for layer wise learning rate:
+```{python}
+def create_optimizer(model):
+    named_parameters = list(model.named_parameters()) 
+    no_decay = ['bias', 'gamma', 'beta']   
+    
+    parameters = []
+    lr = 3e-5
+    regressor_lr = 2e-5
+    for layer in range(23,-1,-1):
+        layer_params = {
+          'params': [
+                      p for n,p in model.named_parameters() if not any(nd in n for nd in no_decay) \
+                      and (f'encoder.layer.{layer}.' in n)
+                      ],
+          'lr': lr
+      }
+        parameters.append(layer_params)
+
+        lr *= 0.975
+
+    regressor_params = {
+      'params': [p for n,p in model.named_parameters() if "roberta" not in n],
+      'lr': regressor_lr
+    }
+
+    parameters.append(regressor_params)
+
+    regressor_params = {
+      'params': [
+                      p for n,p in model.named_parameters() if not any(nd in n for nd in no_decay) \
+                      and (f'roberta.embeddings' in n)
+                      ],
+      'lr': regressor_lr
+    }
+    parameters.append(regressor_params)
+
+    return AdamW(parameters)
 ```
 
 
