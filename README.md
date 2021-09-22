@@ -16,12 +16,18 @@ In this competition, I finished in the top 18% (I had a submission for the top 8
 - Setting Dropout parameters of the transformers model to 0
 - Finding appropriate datasets for pseudo labeling: the training set is very small
 - Create a good ensemble: we had 3 hours to make predictions
-* We will cover all that points later in this documentation.
+
+We will cover all that points later in this documentation.
 
 ## Project Overview
 
-* I love Kaggle Competitions. This is a great way to learn a lot of things regarding the modeling part of a data science project. You can learn from an incredible community and you have also a feedback of what you have done compared to the others with the leaderboard. But kaggle misses some parts of a data science project like for example collecting the data and deploying the model in production. With respect to this last point, I decided to deploy one of my models and even to incorporate different techniques from the winners of the competition (web app link : https://text-comparator.herokuapp.com/). The goal of the web app is to compare the reading level of two different texts. Why is it useful to compare the reading level of two texts ? Have you ever been in a situation where you wanted to explain a complex subject to someone but too many definitions came to your mind so that you could not the most suitable one ? This web app will help you choose the most suitable definition to give to a novice. Under the hood, a bert model assesses the reading level of the two texts and then compare them and returns the most easy one (the model that I deployed is not the best one because of model size constarints for deployments.
-* I also tried to reproduce the best techniques that the winners of the Competition have used. At the end, it improved my model a lot.
+I love Kaggle Competitions. This is a great way to learn a lot of things regarding the modeling part of a data science project. You can learn from an incredible community and you have also a feedback of what you have done compared to the others with the leaderboard. But kaggle misses some parts of a data science project like for example collecting the data and deploying the model in production. With respect to this last point, I decided to deploy one of my models and even to incorporate different techniques from the winners of the competition ([web app](https://text-comparator.herokuapp.com/)). The goal of the web app is to compare the reading level of two different texts. 
+
+Why is it useful to compare the reading level of two texts ? 
+
+Have you ever been in a situation where you wanted to explain a complex subject to someone but too many definitions came to your mind so that you could not choose the most suitable one ? This web app will help you choose the most suitable definition to give to a novice. Under the hood, a bert model assesses the reading level of the two texts and then compare them and returns the most easy one (the model that I deployed is not the best one because of model size constraints for deployments).
+
+I also reproduced the best techniques that the winners of the Competition have used (for learning purposes). 
 
 ## Path to final submission
 
