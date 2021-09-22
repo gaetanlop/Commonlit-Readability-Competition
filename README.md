@@ -51,13 +51,15 @@ I also reproduced the best techniques that the winners of the Competition have u
 
 Before diving into the training of huge transformer models, I wanted to experiments with simpler ones in order to create a baseline. At first, I generated different features based on usual readability formula and then trained a gradient boosting model on this generated dataset. I then switched to RNN, but they seemed to perform worse than gradient boosting models. Thus, I started to use transformers and learn about the [Hugging Face library](https://huggingface.co/). 
 
-* At first, the training was totally unstable. After reading the paper [Universal Language Model Fine-tuning for Text Classification](https://arxiv.org/pdf/1801.06146.pdf) and after looking at the following notebook https://www.kaggle.com/rhtsingh/commonlit-readability-prize-roberta-torch-fit?scriptVersionId=64693127, I started to use layer wise learning rate. Layer wise learning rate and dropout removal enabled to stabilize the training of bert. (
-* 
-(Put a graph from wandb to show that)
-* 
+* At first, the training was totally unstable. After reading the paper [Universal Language Model Fine-tuning for Text Classification](https://arxiv.org/pdf/1801.06146.pdf) and after looking at the following notebook https://www.kaggle.com/rhtsingh/commonlit-readability-prize-roberta-torch-fit?scriptVersionId=64693127, I started to use layer wise learning rate. Layer wise learning rate and dropout removal enabled to stabilize the training of bert. 
+
 * The problem with the instability of bert like models is very well known and is especially important for small datasets (like the one we were working with : less than 3000 training samples). Many papers tried to tackle this problem (please refer to these three papers : https://arxiv.org/pdf/2006.05987.pdf /  https://arxiv.org/pdf/1905.05583.pdf / https://arxiv.org/pdf/2012.15355.pdf). 
 
 (Show both dropout removal and layer wise learning rate in code).
+```{python}
+x = 'hello, python world!'
+print(x.split(' '))
+```
 
 
 After finding a way to stabilize the training of bert, I then tried to add numerical features to it following these papers advices ( https://arxiv.org/pdf/2106.07935.pdf + https://arxiv.org/pdf/2103.04083v1.pdf +  https://aclanthology.org/2021.maiworkshop-1.10.pdf). It improved my cv, but it seems that it was not generalizing to the public test set. I decided to give up with this idea.
