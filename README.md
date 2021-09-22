@@ -146,7 +146,11 @@ After studying the best performing solutions of the competition, I started to in
 
 * It seems that one of the key to success was to use different transformer models (to introduce as much diversity as possible) and to make an ensemble of them (the larger models performed way better than the smaller ones). For my own solution, I fine tuned two type of models: roberta and electra. To improve my solution I decided to add to my ensemble funnel large and deberta large.
 
-(put like a tableau with the scores for each model)
+| Models        | LB before pseudo labeling  | LB after pseudo labeling |
+| ------------- |:--------------------------:| -------------------------:|
+| Electra-large |                      0.468 |                     0.481 |
+| Roberta-large |                      0.465 |                     0.468 |
+| Deberta-large |                          X |                     0.463 |
 
 * The second main improvement that I have made to my models after understanding the best solutions is the use of pseudo labeling. As the training set was very small, increasing its size was crucial. The problem with pseudo labeling is that we need to find external data that are representative of the training data. The winner of the competition introduced a novel technique to do so: create a large external dataset that seemed relevant for the competition, then make text snippets of the external data that have approximately the same length of the training data. Then, he used sentence bert (https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844):
 > To generate sentence embeddings and retrieve the five text snippets which had the highest cosine similarity to the original excerpt 
