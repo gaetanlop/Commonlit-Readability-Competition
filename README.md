@@ -45,7 +45,14 @@ At the end, my final submission was just a blending of Roberta large with mean p
 **For Web Framework Requirements:** ```pip install -r requirements.txt```
 
 **Flask Productionization:** https://pytorch.org/tutorials/intermediate/flask_rest_api_tutorial.html
-* PUT TORCH NOTEBOOKS
+
+**Transformer outputs:** https://www.kaggle.com/rhtsingh/utilizing-transformer-representations-efficiently
+
+**Stochastic Weight Averaging:** https://www.kaggle.com/rhtsingh/swa-apex-amp-interpreting-transformers-in-torch
+
+**Stability of Transformer fine tuning:** https://www.kaggle.com/rhtsingh/on-stability-of-few-sample-transformer-fine-tuning
+
+**Smart Batching:** https://www.kaggle.com/rhtsingh/speeding-up-transformer-w-optimization-strategies
  
 ## Good ressources for NLP
 
