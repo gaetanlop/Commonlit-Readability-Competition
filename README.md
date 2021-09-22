@@ -21,8 +21,28 @@
 
 ## Path to final submission
 
+#### What worked for me
+
+* layer wise learning rate / decay learning rate
+* large models roberta large and electra large
+* Mean/ Attention Pooling
+* Gradient accumulation: Difficult to train large transformer model with a batch size higher than 8 on colab. The problem is, the lower the batch size, the higher the impact of noise on training, thus the use of gradient accumulation to simulate larger batch size (and remove the noise)
+* Multi Sample Dropout (idea come from this paper: https://arxiv.org/pdf/1905.09788.pdf)
+* Stochastic Weight Averaging (SWA)
+
+
+#### What did not work for me
+
+* adding numerical features to transformers
+* Reinitialize last layers of bert model (the idea come ffrom this paper: https://arxiv.org/pdf/2006.05987.pdf
+* mask words randomly during training
+* smart batching
+* Mixout (the idea come from this paper)
+
 * Before diving into the training of huge transformer models, I wanted to experiments wth simpler ones in order to create a baseline. At first, I generated different features based on usual readability formula and then trained a gradient boosting model on this generated dataset. I then switched to RNN, but they seemed to perform worse than gradient boosting and feature engineering models. Thus, I started to use transformers and learn about the hugging face library. 
 	Path to training bert models.
+
+#### Story
 
 * At first, the training was totally unstable. After reading the paper (paper name: https://arxiv.org/pdf/1801.06146.pdf) and after looking at the following notebook https://www.kaggle.com/rhtsingh/commonlit-readability-prize-roberta-torch-fit?scriptVersionId=64693127, I started to use layer wise learning rate. Layer wise learning rate and dropout removal enabled to stabilize the training of bert. Put a graph from wandb to show that. The problem with the instability of bert like models is very well known and is especially important for small datasets (like the one we were working with : less than 3000 training samples). Many papers tried to tackle this problem (https://arxiv.org/pdf/2006.05987.pdf +  https://arxiv.org/pdf/1905.05583.pdf + https://arxiv.org/pdf/2012.15355.pdf). 
 (Show both dropout removal and layer wise learning rate in code).
@@ -34,7 +54,11 @@ I then tried Stochastic Weight Averaging (SWA) that improved a bit my CV and LB 
 As many kagglers where talking about the importance of  ensembles, I looked at different way to decrease inference time. I used Smart Batching for inference but for training it hurts oo much the performance (it was still a great way to experiment faster).
 At the end, my final submission was just a blending of Roberta large with mean pooling, Roberta large with attention pooling, Roberta base with attention pooling and electra large with mean pooling (you can find the notebook in (path for the notebook for inference). Some of them where trained with layer wise learing rate and some with decay learning rate.
 
-## Best solutions Overview
+## What I learned from best solutions
+
+After studying the best performing solutions of the competition, I started to incorporate some of the tricks that I have learned to my own models. 
+* It seems that one of the key to success was to use different transformer models (to introduce as much diversity as possible) and to make an ensemble of them (the larger models performed way better than the smaller ones). For my own solution, I fine tuned two type of models: roberta and electra. To improve my solution I decided to add to my ensemble funnel large and deberta large.
+* The second main improvement that I have made to my models after understanding the best solutions is the use of pseudo labeling. As the training set was very small, increasing its size was crucial. The problem with pseudo labeling is that we need to find external data that are representative of the training data. The winner of the competition introduced a novel technique to do so: create a large external dataset that seemed relevant for the competition, then make text snippets of the external data that have approximately the same length as the training data. Then use sentence bert "to generate sentence embeddings and retrieve the five text snippets which had the highest cosine similarity to the original excerpt" (https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844). I tried this idea by myself on my electra model(you can find my code in the Notebooks folder) and it gave me a huge improvement of 0.01.
 
 ## How to use this repository
 
@@ -44,7 +68,7 @@ At the end, my final submission was just a blending of Roberta large with mean p
 
 **For Web Framework Requirements:** ```pip install -r requirements.txt```
 
-**Flask Productionization:** https://pytorch.org/tutorials/intermediate/flask_rest_api_tutorial.html
+**Flask Productionization:** https://www.python-engineer.com/posts/pytorch-model-deployment-with-flask/
 
 **Transformer outputs:** https://www.kaggle.com/rhtsingh/utilizing-transformer-representations-efficiently
 
@@ -54,24 +78,7 @@ At the end, my final submission was just a blending of Roberta large with mean p
 
 **Smart Batching:** https://www.kaggle.com/rhtsingh/speeding-up-transformer-w-optimization-strategies
  
-## Good ressources for NLP
-
-## Reimplementation Schedule
-
-* Get all external data and their embeddings from simple wiki, wikipedia, children's book test, and OneStopEnglishCropus (Done).
-* Use best models for pseudo labeling (Done)
-* Pseudo Label external data (Script Done) (Idea based on the paper self training https://openaccess.thecvf.com/content_CVPR_2020/papers/Xie_Self-Training_With_Noisy_Student_Improves_ImageNet_Classification_CVPR_2020_paper.pdf.) (Done)
-* Training pipeline for roberta large, roberta base, electra large, deberta large, funnel large (Today and tomorrow).
-* Succesfully reproduced Electra large results with lb 0.461
-* Roberta Large results lb 0.465
-* Deberta Large results lb 0.463
-* Also DistilBert for future deployment
-* I should try funnel and layer wise learning rate
-* Two possibilities to train the models: train on both pseudo labels and training set at the same time, or train on pseudo then training set.
-
-* What to do next ? https://towardsdatascience.com/what-i-learned-from-stanfords-covid-mrna-vaccine-kaggle-competition-98d3f454eef. Write an article about top solutions like this one.
-
-* https://www.python-engineer.com/posts/pytorch-model-deployment-with-flask/ for productionization.
+## Best ressources for NLP
 
 
 ## What I have done
