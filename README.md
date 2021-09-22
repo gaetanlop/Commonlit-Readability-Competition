@@ -38,6 +38,7 @@
 * mask words randomly during training
 * smart batching
 * Mixout (the idea come from this paper)
+* Training the model on classification task then on regression task
 
 * Before diving into the training of huge transformer models, I wanted to experiments wth simpler ones in order to create a baseline. At first, I generated different features based on usual readability formula and then trained a gradient boosting model on this generated dataset. I then switched to RNN, but they seemed to perform worse than gradient boosting and feature engineering models. Thus, I started to use transformers and learn about the hugging face library. 
 	Path to training bert models.
@@ -61,6 +62,23 @@ After studying the best performing solutions of the competition, I started to in
 * The second main improvement that I have made to my models after understanding the best solutions is the use of pseudo labeling. As the training set was very small, increasing its size was crucial. The problem with pseudo labeling is that we need to find external data that are representative of the training data. The winner of the competition introduced a novel technique to do so: create a large external dataset that seemed relevant for the competition, then make text snippets of the external data that have approximately the same length as the training data. Then use sentence bert "to generate sentence embeddings and retrieve the five text snippets which had the highest cosine similarity to the original excerpt" (https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844). I tried this idea by myself on my electra model(you can find my code in the Notebooks folder) and it gave me a huge improvement of 0.01.
 
 ## How to use this repository
+
+This github repo is composed of two parts:
+
+#### Notebooks folder 
+- In this folder, you can find some of my notebooks that I developed during and after the competition (when I incorporated tricks from top solutions.
+* Blending-Inference-Kaggle : It is the notebook that I used to make inference on kaggle.
+* Blending-Weights-Optuna : In this notebook, I used Optuna to find the best weights for each of my model for the final submission on Kaggle
+* Create-External-Data : In this notebook, I gathered some external data following the tricks of the competition winner.
+* Deberta_Large_Training : This is one of my notebook to train a large transformer model from hugging face.
+* Pseudo Labeling : In this notebook, I used my best models fromt he competition to pseudo label the selected external data.
+
+#### Other folder and files 
+The other folder and files are all related to deployment.
+* app.py : the main app
+* torch_utils.py : some useful pytorch functions that I used in app.py
+* Templates folder : HTML code
+* Static folder : css code
 
 ## Code and Resources Used
 
@@ -131,83 +149,7 @@ After studying the best performing solutions of the competition, I started to in
 
 * Try pseudo labeling with std. I need to try combining std and targets! MTL ??
 
-
-* IDEA / TRAIN THE MODEL ON CLASSIFICATION THEN REGRESSION TASK or combine two bert models one on classification and the other on regression task.
-
 * Found a very interesting blog about NLP: https://mccormickml.com/
-* Add directly the numerical features then concat the attention layer or multi headed self attention layer check https://aclanthology.org/2021.maiworkshop-1.10.pdf github. Test the different possibilities. But tomorrow first understand and finetune the following notebook : https://www.kaggle.com/andretugan/lightweight-roberta-solution-in-pytorch
-
-## Best solutions
-
-* Different models : roberta large, electra large, deberta large, luke large, funnel large
-* key parameters: lerning rate, head, dropout removal, pseudo labeling, activation, loss function
-* Importance of model diversity
-* Make sure that external datasets are representative of the training data
-* try a bigger k in kfold cross val to have a better cross validation strategy
-
-* Google sheet link for experiments https://docs.google.com/spreadsheets/d/1zMy1EWSGylj0xPF-PY_FLF2q1VUcLISbPF_MRbO-xGw/edit?usp=sharing
-
-### From 1100 to 40 th in 3 days
-* https://www.youtube.com/watch?v=XLaq-boyAGk&t=10s
-* https://github.com/VigneshBaskar/kaggle_commonlit/blob/main/solution_walkthrough.ipynb
-* https://www.kaggle.com/c/commonlitreadabilityprize/discussion/258363
-* Pretraining using wikipedia data using rankingloss
-* Mask added attention head
-* Layer wise learning rate
-
-### 6th place solution (Gaussian process regression (GPR))
-* https://www.kaggle.com/c/commonlitreadabilityprize/discussion/258554
-* Pseudo labelling + GPR
-* Change pretrained models to squad and triviaqa
-* Dropout Removal
-
-### Private 22nd Place solution
-* gradient clipping 
-* reinitialize last layers
-* LSTM heads
-
-### 9th place solution -Ensemble of four models
-* cross validation strategy: increase the number of folds to 15.
-* use deberta base to find best params for deberta large. use this paper: https://arxiv.org/pdf/2006.04884.pdf
-* BCEWithLogitsLoss as a loss function "we trained BCEWithLogitsLoss using Sigmoid(target-Median(target)) as the prediction label. Median(target) was added to the regressor during prediction"
-
-### 15th Place
-* https://www.kaggle.com/c/commonlitreadabilityprize/discussion/260800
-* SVR head
-
-### 1st place solution - external data, teacher/student and sentence transformers
-* https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844
-* "made a large collection of external data. I used sentence bert (Reimers and Gurevych 2019 - https://github.com/UKPLab/sentence-transformers) to select for each excerpt in the train set the 5 most similar snippets in the external data collection"
-* trained some different models on the pseudo-labeled data for 1-4 epochs. After training on the pseudo-labeled data, I trained each model on the original training set. 
-* Use external data from simplewiki, wikipedia and book corpus
-* Sentence Bert paper: https://arxiv.org/abs/1908.10084
-* https://www.sbert.net/
-* https://github.com/mathislucka/kaggle_clrp_1st_place_solution
-
-
-### Single PairWise model
-* https://www.kaggle.com/c/commonlitreadabilityprize/discussion/258283
-* Interesting idea to try.
-
-### An Alternative Approach - Compare Excerpts
-* https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257446
-* Interesting idea to try also for pretraining for example
-
-## Project Idea
-
-You want to explain a topic to someone (kids, novice, expert), you have multiple definitions that comes to your mind, using the api decide the definition you should chose. First the user enter for what type of person he wants to give this definition. Then, enters 2 to 3 diffzerent definitions. After that, the model will select the most suitable one for the usecase. Deploy on AWS or Heroku or maybe on tensorflow lite.
-
-## Proposition for the PFE
-
-* weights and biases dashboard: https://wandb.ai/ruchi798/commonlit?workspace=user-ruchi798
-* Find external datasets (sentence bert) (https://www.kaggle.com/markwijkhuizen/discussion)
-* Improve models using pseudo labeling 
-* Try to use differential learnign rate/ bigger k/ remove all dropout
-* Create a script to reset training if it diverges (example seed/ mlm or not)
-* Try new loss functions / Different heads
-* Try single pairwise model
-* Train at least 2 different single models like electra deberta funnel or roberta
-* Deploy the web app and create an article on medium explaining how to turn a kaggle competitions into an application (explain everyhting about what we used to create the model and the deployment part).
 
 ## Weight and Biases learning
 
